@@ -58,6 +58,7 @@ public class AddressController {
     //inserts single address using Dto
     @PostMapping
     public ResponseEntity<String> saveUsingDto(@RequestBody AddressDto addressDto){
+        System.out.println("saving user address");
          addressService.save(addressDto);
          return new ResponseEntity<>("Address saved successfully", HttpStatus.CREATED);
     }
