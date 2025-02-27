@@ -29,11 +29,13 @@ public class PersonController {
 
     @PostMapping
     public ResponseEntity<String> save(@RequestBody Person person){
+        LOGGER.info("Saving person::"+person);
         return ResponseEntity.status(200).body(personService.save(person));
     }
 
     @GetMapping
     public ResponseEntity<List<Person>> getAllPersons() {
+        LOGGER.info("Getting all persons");
         return ResponseEntity.ok(personService.getAllPersons());
     }
 }
