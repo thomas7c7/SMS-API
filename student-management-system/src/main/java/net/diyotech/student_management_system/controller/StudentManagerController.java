@@ -27,6 +27,8 @@ public class StudentManagerController {
     @PostMapping("/login")
     public ResponseEntity<StudentManager> checkValidStudentManager (@RequestBody StudentManager studentManager){
         System.out.println("checking valid student");
+        System.out.println("Checking valid student manager");
+        System.out.println("this is git merge test");
         return ResponseEntity.ok(this.studentManagerService.checkValidStudentManager(studentManager));
     }
 }

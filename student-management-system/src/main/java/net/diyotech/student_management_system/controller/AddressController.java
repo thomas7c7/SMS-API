@@ -58,6 +58,7 @@ public class AddressController {
     //inserts single address using Dto
     @PostMapping
     public ResponseEntity<String> saveUsingDto(@RequestBody AddressDto addressDto){
+        System.out.println("saving user address dto");
         System.out.println("saving user address");
          addressService.save(addressDto);
          return new ResponseEntity<>("Address saved successfully", HttpStatus.CREATED);
@@ -73,6 +74,7 @@ public class AddressController {
     //URL: locahost:8080/address/{id}
     @DeleteMapping("/{id}") //map used to delete
     public String delete(@PathVariable("id") Long addressID){
+        System.out.println("test sout");
         addressService.delete(addressID);
         return "Address deleted successfully";
     }

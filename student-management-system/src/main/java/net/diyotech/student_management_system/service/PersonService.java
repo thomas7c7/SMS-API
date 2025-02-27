@@ -30,6 +30,7 @@ public class PersonService {
     }
 
     public List<Person> getAllPersons() {
+        System.out.println("Getting all persons");
         return personRepository.findAll();
     }
 }
