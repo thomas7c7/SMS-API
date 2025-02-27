@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.List;
 
 @RestController
 //@RequestMapping("/person") //url for one to one mapping
@@ -30,4 +33,9 @@ public class PersonController {
         return ResponseEntity.status(200).body(personService.save(person));
     }
 
+    @GetMapping
+    public ResponseEntity<List<Person>> getAllPersons() {
+        LOGGER.info("Getting all persons");
+        return ResponseEntity.ok(personService.getAllPersons());
+    }
 }

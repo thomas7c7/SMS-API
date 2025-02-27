@@ -8,6 +8,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PersonService {
 
@@ -27,4 +29,7 @@ public class PersonService {
         return "Person not saved!";
     }
 
+    public List<Person> getAllPersons() {
+        return personRepository.findAll();
+    }
 }
