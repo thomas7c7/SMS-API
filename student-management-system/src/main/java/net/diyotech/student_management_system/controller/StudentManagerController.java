@@ -19,7 +19,8 @@ public class StudentManagerController {
     //Sign Up
     @PostMapping
     public ResponseEntity<String> saveStudentManager(@RequestBody StudentManager studentManager){
-       return ResponseEntity.ok(studentManagerService.saveStudentManager(studentManager));
+        System.out.println("test");
+        return ResponseEntity.ok(studentManagerService.saveStudentManager(studentManager));
     }
 
     //Log In
