@@ -41,6 +41,7 @@ public class AddressController {
     //null pointer exception example
     @GetMapping("/test2")
     public ResponseEntity<String> readPropertyValue(){
+        System.out.println("Reading property value");
         String text = null;
         System.out.println(text.length());
         return ResponseEntity.ok(company);
